@@ -247,9 +247,9 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
             scrollButtonOffsetX = 0
             
         //Case3:一番最後のpage番号のときの移動量
-        } else if page == (ScrollButtonList.buttonList.count - 2) {
+        } else if page == (ScrollButtonList.buttonList.count - 1) {
             
-            scrollButtonOffsetX = Int(multiButtonScrollView.frame.width)
+            scrollButtonOffsetX = Int(multiButtonScrollView.frame.width) * (ScrollButtonList.buttonList.count / 3 - 1)
         }
         
         UIView.animate(withDuration: 0.26, delay: 0, options: [], animations: {
