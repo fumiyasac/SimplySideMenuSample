@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PictureCell" id="KGk-i7-Jjw" customClass="PictureCell" customModule="SimplySideMenuSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="209"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBh-z8-IM2">
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0y-dE-sxa">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="cNG-Is-aPP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5X-2j-DRr">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hET-XA-gaA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1099/09/09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxX-96-x3V">
+                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="AGe-CU-DES"/>
+                            <constraint firstAttribute="height" constant="18" id="SaZ-1n-UYw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="p5X-2j-DRr" secondAttribute="trailing" constant="15" id="3nV-Oh-Dfn"/>
+                    <constraint firstAttribute="bottom" secondItem="RxX-96-x3V" secondAttribute="bottom" constant="10" id="BuY-Nn-PeI"/>
+                    <constraint firstItem="TBh-z8-IM2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cg8-4M-m2s"/>
+                    <constraint firstItem="TBh-z8-IM2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F6K-LY-rol"/>
+                    <constraint firstItem="p5X-2j-DRr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GjJ-X9-O44"/>
+                    <constraint firstItem="J0y-dE-sxa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HoR-hj-4Zw"/>
+                    <constraint firstItem="J0y-dE-sxa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pb1-Jd-1Ck"/>
+                    <constraint firstAttribute="trailing" secondItem="RxX-96-x3V" secondAttribute="trailing" constant="10" id="Roy-6u-2fN"/>
+                    <constraint firstItem="p5X-2j-DRr" firstAttribute="top" secondItem="J0y-dE-sxa" secondAttribute="bottom" constant="5" id="cd6-JN-xtb"/>
+                    <constraint firstAttribute="trailing" secondItem="TBh-z8-IM2" secondAttribute="trailing" id="ds7-Im-AYl"/>
+                    <constraint firstAttribute="trailing" secondItem="J0y-dE-sxa" secondAttribute="trailing" constant="15" id="lIN-1R-FA9"/>
+                    <constraint firstAttribute="bottom" secondItem="TBh-z8-IM2" secondAttribute="bottom" id="wij-R4-E2U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="wij-R4-E2U" id="DyF-H1-0cW"/>
+                <outlet property="parallaxImage" destination="TBh-z8-IM2" id="b1C-6h-ONO"/>
+                <outlet property="pictureCopy" destination="p5X-2j-DRr" id="Xm6-Wx-4e4"/>
+                <outlet property="pictureDate" destination="RxX-96-x3V" id="SH7-Ov-8Qf"/>
+                <outlet property="pictureTitle" destination="J0y-dE-sxa" id="V20-4P-VEa"/>
+                <outlet property="topConstraint" destination="F6K-LY-rol" id="dAe-wN-s5B"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
