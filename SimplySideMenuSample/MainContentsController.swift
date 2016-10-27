@@ -155,48 +155,48 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
         models.append(
             PictureModel(
                 backimage: "image1.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Cafe and Pan Cake Style",
+                kcpy: "Popular and Pretty style breakfast plate.",
                 datestr: "2016/10/27"
             )
         )
         models.append(
             PictureModel(
                 backimage: "image2.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Fruits and Granora Style",
+                kcpy: "Simple and useful for busy morning time.",
                 datestr: "2016/10/27"
             )
         )
         models.append(
             PictureModel(
                 backimage: "image3.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Baglesand with Loast Beef Style",
+                kcpy: "High volume and very powerful meal.",
                 datestr: "2016/10/27"
             )
         )
         models.append(
             PictureModel(
                 backimage: "image4.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Sandwitch and Salad Style",
+                kcpy: "The elegant breakfast not inferior to cafe.",
                 datestr: "2016/10/27"
             )
         )
         models.append(
             PictureModel(
                 backimage: "image5.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Typical Japanese Style",
+                kcpy: "Rice, Miso soup and grilled fish. This is 'wa'.",
                 datestr: "2016/10/27"
             )
         )
         models.append(
             PictureModel(
                 backimage: "image6.jpg",
-                title: "Happy Faces",
-                kcpy: "Happy Faces",
+                title: "Home-made Breakfast Style",
+                kcpy: "Breakfast timeless and be used to eating.",
                 datestr: "2016/10/27"
             )
         )

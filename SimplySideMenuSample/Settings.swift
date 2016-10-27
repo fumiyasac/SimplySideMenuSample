@@ -35,6 +35,6 @@ struct ScrollButtonList {
 
 //スライドメニューの位置
 struct SlideMenuSetting {
-    static let movingLabelY = 38
-    static let movingLabelH = 2
+    static let movingLabelY = 0
+    static let movingLabelH = 3
 }
