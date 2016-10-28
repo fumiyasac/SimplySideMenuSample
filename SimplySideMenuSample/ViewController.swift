@@ -28,6 +28,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     //このViewControllerのタッチイベント開始時のx座標（コンテンツが開いた状態で仕込まれる）
     var touchBeganPositionX: CGFloat!
     
+    //タップジェスチャー時に別のタップが呼ばれないようにする
+    var tapOnceFlag: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,17 +49,20 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         edgeGesture.edges = .left
 
         //初期状態では左隅部分のGestureRecognizerを有効にしておく
-        self.view.addGestureRecognizer(edgeGesture)
+        mainContentsContainer.addGestureRecognizer(edgeGesture)
     }
-    
+
     //※サイドメニューが閉じた状態：左隅のドラッグを行ってコンテンツを開く際の処理
     func edgeTapGesture(sender: UIScreenEdgePanGestureRecognizer) {
 
         //サイドメニューのタッチイベントを有効にする
         sideMenuContainer.isUserInteractionEnabled = true
         
+        //メインコンテンツのタッチイベントを無効にする
+        mainContentsContainer.isUserInteractionEnabled = false
+        
         //移動量を取得する
-        let move: CGPoint = sender.translation(in: self.view)
+        let move: CGPoint = sender.translation(in: mainContentsContainer)
         
         //メインコンテンツと透明ボタンのx座標に移動量を加算する
         draggableButton.frame.origin.x += move.x
