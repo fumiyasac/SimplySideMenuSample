@@ -27,10 +27,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //このViewControllerのタッチイベント開始時のx座標（コンテンツが開いた状態で仕込まれる）
     var touchBeganPositionX: CGFloat!
-    
-    //タップジェスチャー時に別のタップが呼ばれないようにする
-    var tapOnceFlag: Bool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
