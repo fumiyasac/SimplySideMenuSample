@@ -139,7 +139,7 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
     //コンテンツ用のUIScrollViewの初期化を行う
     fileprivate func initScrollViewDefinition() {
         
-        //（重要）BaseViewControllerの「Adjust Scroll View Insets」のチェックを外しておく
+        //（重要）MainContentsControllerの「Adjust Scroll View Insets」のチェックを外しておく
         //スクロールビュー内の各プロパティ値を設定する
         multiButtonScrollView.isPagingEnabled = false
         multiButtonScrollView.isScrollEnabled = true
@@ -343,18 +343,6 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
                 }
                 
             }
-        }
-
-        //ボタンのスクロールビューの場合
-        if scrollView == multiButtonScrollView {
-            
-            //現在表示されているページ番号を判別する
-            let pageWidth = multiButtonScrollView.frame.width
-            let fractionalPage = Double(multiButtonScrollView.contentOffset.x / pageWidth)
-            let page: Int = lround(fractionalPage)
-            
-            //ボタン配置用のスクロールビューもスライドさせる
-            moveFormNowButtonContentsScrollView(page: page)
         }
         
     }
