@@ -310,34 +310,35 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
             //スクロール終了時のy座標を取得する
             let currentPoint = scrollView.contentOffset
             
-            //下向きのスクロールを行った場合の処理
+            //下方向のスクロールを行った場合の処理
             if scrollBeginingPoint.y < currentPoint.y {
                 
                 //自作メニューを隠して、変化量が40以上であればナビゲーションバーも一緒に隠す
-                hideNavigationFromChildView(direction: .lower)
-                if currentPoint.y - self.scrollBeginingPoint.y > 40 {
+                topMenuConstraint.constant = -40
+                UIView.animate(withDuration: 0.26, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    
+                    //変更したAutoLayoutのConstant値を適用する
+                    self.view.layoutIfNeeded()
+                    }, completion: { finished in
+                })
 
-                    topMenuConstraint.constant = -40
-                    UIView.animate(withDuration: 0.26, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                        
-                            //変更したAutoLayoutのConstant値を適用する
-                            self.view.layoutIfNeeded()
-                        }, completion: { finished in
-                    })
+                if currentPoint.y - self.scrollBeginingPoint.y > 40 {
+                    hideNavigationFromChildView(direction: .lower)
                 }
                 
-            //上向きのスクロールを行った場合の処理
+            //上方向のスクロールを行った場合の処理
             } else {
                 
-                //自作メニューを表示して、変化量が40以上であればナビゲーションバーも一緒に表示
+                //ナビゲーションバーを表示して、変化量が40以上であれば自作メニューも一緒に表示
                 hideNavigationFromChildView(direction: .upper)
                 
                 if scrollBeginingPoint.y - currentPoint.y > 40 {
                     
                     topMenuConstraint.constant = 0
                     UIView.animate(withDuration: 0.26, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-
-
+                        
+                        //変更したAutoLayoutのConstant値を適用する
+                        self.view.layoutIfNeeded()
                         }, completion: { finished in
                     })
                 }
