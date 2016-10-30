@@ -43,7 +43,7 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
         //StatusBarの背景を設定
         let statusBar = UIView(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 20))
         statusBar.backgroundColor = UIColor.white
-        view.addSubview(statusBar)
+        self.view.addSubview(statusBar)
         
         //UINavigationControllerのデリゲート
         navigationController?.delegate = self
@@ -141,6 +141,7 @@ class MainContentsController: UIViewController, UINavigationControllerDelegate, 
         
         //（重要）MainContentsControllerの「Adjust Scroll View Insets」のチェックを外しておく
         //スクロールビュー内の各プロパティ値を設定する
+        //※注意: 今回は配置したボタン押下時の位置補正をするだけなので、このUIScrollViewに対してのUIScrollViewDelegateの処理はない
         multiButtonScrollView.isPagingEnabled = false
         multiButtonScrollView.isScrollEnabled = true
         multiButtonScrollView.isDirectionalLockEnabled = false
