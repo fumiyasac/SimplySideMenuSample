@@ -69,7 +69,7 @@
         <scene sceneID="9Yv-Si-6wQ">
             <objects>
                 <navigationController id="d8b-UA-m3m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Nnk-Ib-4tO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nnk-Ib-4tO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -153,15 +153,24 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="place.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SIk-D4-zuB">
                                 <rect key="frame" x="0.0" y="547" width="240" height="120"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSL-Nq-8IL">
+                                <rect key="frame" x="0.0" y="547" width="240" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="aHD-ig-NHR"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Y6f-ua-lL2" firstAttribute="top" secondItem="YSL-Nq-8IL" secondAttribute="bottom" id="7mM-11-DdD"/>
                             <constraint firstAttribute="trailing" secondItem="7Xm-Ww-sys" secondAttribute="trailing" id="En6-gc-KlV"/>
                             <constraint firstItem="7Xm-Ww-sys" firstAttribute="top" secondItem="p93-6Q-lEf" secondAttribute="bottom" constant="20" id="Izd-oS-411"/>
                             <constraint firstAttribute="trailing" secondItem="SIk-D4-zuB" secondAttribute="trailing" id="QJD-9u-abl"/>
                             <constraint firstItem="SIk-D4-zuB" firstAttribute="top" secondItem="beS-c7-XZp" secondAttribute="bottom" id="Xra-e9-VPO"/>
                             <constraint firstAttribute="trailing" secondItem="beS-c7-XZp" secondAttribute="trailing" id="dNg-DR-lY9"/>
+                            <constraint firstItem="YSL-Nq-8IL" firstAttribute="leading" secondItem="v0E-Pf-IfF" secondAttribute="leading" id="eBo-8I-q1X"/>
                             <constraint firstItem="beS-c7-XZp" firstAttribute="top" secondItem="7Xm-Ww-sys" secondAttribute="bottom" constant="8" id="elc-mo-xWn"/>
+                            <constraint firstAttribute="trailing" secondItem="YSL-Nq-8IL" secondAttribute="trailing" id="gEM-34-LtX"/>
                             <constraint firstItem="SIk-D4-zuB" firstAttribute="leading" secondItem="v0E-Pf-IfF" secondAttribute="leading" id="gue-yD-e4o"/>
                             <constraint firstItem="beS-c7-XZp" firstAttribute="leading" secondItem="v0E-Pf-IfF" secondAttribute="leading" id="jeU-Ha-gkn"/>
                             <constraint firstItem="7Xm-Ww-sys" firstAttribute="leading" secondItem="v0E-Pf-IfF" secondAttribute="leading" id="uyQ-oc-ezH"/>
