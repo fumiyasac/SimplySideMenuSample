@@ -20,6 +20,7 @@ class SideMenuController: UIViewController, UITableViewDelegate, UITableViewData
         menuTableView.delegate = self
         menuTableView.dataSource = self
         menuTableView.rowHeight = 60
+        menuTableView.sectionHeaderHeight = 48
         
         //Xibのクラスを読み込む宣言を行う
         let nibTableView: UINib = UINib(nibName: "MenuCell", bundle: nil)
@@ -30,7 +31,25 @@ class SideMenuController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
     }
 
-    /* UITableViewDataSource */
+    /* UITableViewDelegate */
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        //ヘッダー用の差し込むViewを作成する
+        let headerView: UIView = UIView()
+        headerView.backgroundColor = UIColor.white
+        
+        //ヘッダーに表示するラベルを作成する
+        let label: UILabel = UILabel()
+        label.frame = CGRect(x: 0, y: 20, width: self.view.frame.width, height: 20)
+        label.text = "Menu"
+        label.textAlignment = NSTextAlignment.center
+        label.backgroundColor = UIColor.white
+        label.font = UIFont(name: "Georgia-Bold", size: 15)!
+        headerView.addSubview(label)
+
+        return headerView
+    }
+    
     
     //Cellの総数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
